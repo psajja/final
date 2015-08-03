@@ -47,7 +47,7 @@ class GeneratorsController < ApplicationController
 
   def destroy
     Generator.delete(params[:id])
-    redirect_to "/generator"
+    redirect_to "/generators"
   end
 
 end
