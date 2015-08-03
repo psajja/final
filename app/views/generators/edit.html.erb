@@ -1,0 +1,45 @@
+<h1>Edit a New Movie</h1>
+
+<%= form_tag "/generators/#{@generator.id}", :method => "patch" do %>
+  <div>
+    <label>Queue :</label>
+    <input type="text" name="queue" value="<%= @generator.queue %>">
+  </div>
+
+  <div>
+    <label>Project Name :</label>
+    <input type="text" name="projectname" value="<%= @generator.project_name %>">
+  </div>
+
+
+  <div>
+    <label>MW :</label>
+    <input type="text" name="mw" value="<%= @generator.mw %>">
+  </div>
+  
+  
+  <div>
+    <label>In Service Date :</label>
+    <input type="text" name="inservicedate" value="<%= @generator.inservice_date %>">
+  </div>
+  
+  
+  <div>
+    <label>Fuel Type:</label>
+    <input type="text" name="fueltype" value="<%= @generator.fueltype %>">
+  </div>
+    
+    
+  <div>
+    <label>County :</label>
+    <input type="text" name="county" value="<%= @generator.county %>">
+  </div>
+      
+  <div>
+    <label>State :</label>
+    <input type="text" name="state" value="<%= @generator.state %>">
+  </div>
+
+  <input type="submit" value="Update Generator">
+
+<% end %>

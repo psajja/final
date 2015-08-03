@@ -1,0 +1,52 @@
+<h1> Generators </h1>
+<%= link_to("Add New Generator", "generators/new") %>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Queue</th>
+      <th>"Project Name</th>
+      <th>"Mega Watt</th>
+      <th>"In Service Date</th>
+      <th>"Fuel Type</th>
+      <th>"County</th>
+      <th>"State</th>
+    </tr>  
+  </thead>
+ 
+  <tbody>
+    <% @generators.each do |generator| %>
+      <tr>
+        <td>
+          <%= link_to generator.queue, "/generators/#{generator.id}" %>
+          <%= link_to "(edit)", "/generators/#{generator.id}/edit" %>
+        </td>
+        <td>
+          <%= generator.project_name %>
+        </td>
+        <td>
+          <%= generator.mw %>
+        </td>
+        <td>
+          <%= generator.inservice_date %>
+        </td>
+        <td>
+          <%= generator.fueltype %>
+        </td>
+        <td>
+          <%= generator.county %>
+        </td>
+        <td>
+          <%= generator.state %>
+        </td>
+        
+        <td>
+          <%= link_to "Delete", "/generators/#{generator.id}", :method => "delete" %>
+        </td>
+        
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>

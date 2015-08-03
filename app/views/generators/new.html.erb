@@ -1,0 +1,44 @@
+<h1>Add a New Generator </h1>
+
+<%= form_tag "/generators" do %>
+  <div>
+    <label>Queue :</label>
+    <input type="text" name="queue">
+  </div>
+
+  <div>
+    <label>Project Name :</label>
+    <input type="text" name="projectname">
+  </div>
+  
+  <div>
+    <label>MW :</label>
+    <input type="text" name="mw">
+  </div>
+  
+  
+  <div>
+    <label>In Service Date :</label>
+    <input type="text" name="inservicedate">
+  </div>
+    
+    
+  <div>
+    <label>Fuel Type :</label>
+    <input type="text" name="fueltype">
+  </div>
+  
+  <div>
+    <label>County :</label>
+    <input type="text" name="county">
+  </div>
+    
+    
+  <div>
+    <label>State :</label>
+    <input type="text" name="state">
+  </div>
+
+  <input type="submit" value="Add Generator">
+
+<% end %>

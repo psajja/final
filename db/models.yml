@@ -1,0 +1,10 @@
+Generator
+  queue: string
+  project_name: string
+  mw: integer
+  inservice_date: string
+  fueltype: string
+  county: string
+  state: string
+  
+  
