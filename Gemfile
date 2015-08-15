@@ -45,14 +45,13 @@ group :development, :test do
   gem 'ez'
   
   
-  group :development, :test do
+group :development, :test do
   gem 'sqlite3'
 
 end
 
 group :production do
-  gem "pg"
-
+  gem 'pg' ,'~> 0.18.2'
 end
 
   
