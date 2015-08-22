@@ -13,14 +13,29 @@
 
 ActiveRecord::Schema.define(version: 0) do
 
+  create_table "fuels", force: :cascade do |t|
+    t.string "availability"
+    t.string "linktoimage"
+    t.string "fueltype"
+  end
+
   create_table "generators", force: :cascade do |t|
     t.string  "queue"
     t.string  "project_name"
     t.integer "mw"
     t.string  "inservice_date"
-    t.string  "fueltype"
     t.string  "state"
     t.string  "county"
+    t.integer "fuel_id"
+  end
+
+  add_index "generators", ["fuel_id"], name: "index_generators_on_fuel_id"
+
+  create_table "users", force: :cascade do |t|
+    t.string  "name"
+    t.string  "email"
+    t.boolean "admin",           default: false
+    t.string  "password_digest"
   end
 
 end

@@ -3,8 +3,19 @@ Generator
   project_name: string
   mw: integer
   inservice_date: string
-  fueltype: string
+  fuel_id: integer
   county: string
   state: string
   
   
+User
+  name: string
+  email: string
+  admin: boolean(false)
+  password_digest: string
+  
+  
+Fuel
+  fueltype: string
+  availability: string
+  linktoimage: string

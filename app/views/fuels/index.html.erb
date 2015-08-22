@@ -1,0 +1,26 @@
+<h1> POWER PLANT FUELS </h1>
+
+<%= link_to("Add New Fuel", "fuels/new") %>
+
+<table class='table table-striped'>
+  <thead>
+    <tr>
+      <th width="30%">Fuel Type</th>
+      <th width="30%"> Availability </th>
+      <th></th>
+      <th></th>
+    </tr>
+  <tbody>
+    <% @fuels.each do |fuel| %>
+      <tr>
+        <td>
+          <%= link_to fuel.fueltype, "/fuels/#{fuel.id}" %>
+        </td>
+        <td><%= fuel.availability %></td>
+
+        <td><%= link_to "Delete", "/fuels/#{fuel.id}", :method => "delete" %></td>
+        <td><%= link_to "Edit", "/fuels/#{fuel.id}/edit" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

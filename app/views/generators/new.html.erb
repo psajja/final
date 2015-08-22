@@ -1,5 +1,6 @@
 <h1>Add a New Generator </h1>
 
+
 <%= form_tag "/generators" do %>
   <div>
     <label>Queue :</label>
@@ -22,11 +23,13 @@
     <input type="text" name="inservicedate">
   </div>
     
-    
-  <div>
-    <label>Fuel Type :</label>
-    <input type="text" name="fueltype">
-  </div>
+  <label>Fuel Type :</label>
+  <select name="fuel_id">
+
+    <% Fuel.all.each do |d| %>
+      <option value="<%= d.id %>"><%= d.fueltype %></option>
+    <% end %>
+  </select>
   
   <div>
     <label>County :</label>

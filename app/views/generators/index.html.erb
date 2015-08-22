@@ -1,8 +1,7 @@
-<h1> Generators </h1>
 <%= link_to("Add New Generator", "generators/new") %>
 
 
-<table>
+<table class="table table-stripped">
   <thead>
     <tr>
       <th>Queue</th>
@@ -12,6 +11,7 @@
       <th>"Fuel Type</th>
       <th>"County</th>
       <th>"State</th>
+      <th></th>
     </tr>  
   </thead>
  
@@ -32,7 +32,8 @@
           <%= generator.inservice_date %>
         </td>
         <td>
-          <%= generator.fueltype %>
+          <%= Fuel.find_by(id:generator.fuel_id).fueltype %>
+          
         </td>
         <td>
           <%= generator.county %>

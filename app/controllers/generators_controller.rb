@@ -1,8 +1,15 @@
 class GeneratorsController < ApplicationController
 
+
   def index
-    @generators = Generator.all
+    if params["keyword"].present?
+      k = params["keyword"].strip
+      @generators = Generator.where("queue LIKE ?", "%#{k}%")
+    else
+      @generators = Generator.all
+    end
   end
+
 
   def new
   end
@@ -33,7 +40,7 @@ class GeneratorsController < ApplicationController
     generator.project_name = params["projectname"]
     generator.mw = params["mw"]
     generator.inservice_date = params["inservicedate"]
-    generator.fueltype = params["fueltype"]
+    generator.fuel_id = params["fuel_id"]
     generator.county = params["county"]
     generator.state = params["state"]
     generator.save

@@ -1,0 +1,21 @@
+<h1>Add a New Fuel </h1>
+
+<%= form_tag "/fuels" do %>
+  <div>
+    <label>Fuel Type :</label>
+    <input type="text" name="fueltype">
+  </div>
+
+  <div>
+    <label>Availability :</label>
+    <input type="text" name="availability">
+  </div>
+  
+  <div>
+    <label>Link to Image :</label>
+    <input type="text" name="linktoimage">
+  </div>
+
+  <input type="submit" value="Add New Fuel">
+
+<% end %>

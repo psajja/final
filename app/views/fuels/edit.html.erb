@@ -1,0 +1,26 @@
+<h1>Edit a Fuel</h1>
+
+
+<%= form_tag "/fuels/#{@fuel.id}", :method => "patch" do %>
+  <div>
+    <label>Fuel Type :</label>
+    <input type="text" name="fueltype" value="<%= @fuel.fueltype %>">
+  </div>
+
+  <div>
+    <label>Availability :</label>
+    <input type="text" name="availability" value="<%= @fuel.availability %>">
+  </div>
+
+  <div>
+    <label>Link to Image :</label>
+    <input type="text" name="linktoimage" value="<%= @fuel.linktoimage %>">
+  </div>
+
+
+  <input type="submit" value="Update Fuel">
+
+<% end %>
+
+
+
