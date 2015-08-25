@@ -9,8 +9,9 @@ or
 https://shrouded-bayou-1624.herokuapp.com
 
 
+2. Please run bundle install like this
 
-
+bundle install --without production
 
 
 
