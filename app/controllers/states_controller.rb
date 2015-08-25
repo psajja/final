@@ -34,7 +34,8 @@ class StatesController < ApplicationController
 
   def destroy
     State.delete(params[:id])
-    #Generator.where(:fuel_id => params[:id]).destroy_all
+
+    Generator.where(:state_id => params[:id]).destroy_all
     redirect_to "/states"
   end
 

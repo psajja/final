@@ -1,4 +1,4 @@
-<h1>Edit a New Movie</h1>
+<h1>Edit Generator</h1>
 
 <%= form_tag "/generators/#{@generator.id}", :method => "patch" do %>
   <div>
@@ -22,24 +22,28 @@
     <label>In Service Date :</label>
     <input type="text" name="inservicedate" value="<%= @generator.inservice_date %>">
   </div>
-  
-  
-  <div>
-    <label>Fuel Type:</label>
-    <input type="text" name="fueltype" value="<%= @generator.fueltype %>">
-  </div>
-    
+      
+
+  <label>Fuel Type :</label>
+  <select name="fuel_id">
+
+  <% Fuel.all.each do |d| %>
+      <option value="<%= d.id %>"><%= d.fueltype %></option>
+    <% end %>
+  </select>
     
   <div>
     <label>County :</label>
     <input type="text" name="county" value="<%= @generator.county %>">
   </div>
       
+  <label>State :</label>
+  <select name="state_id">
+  <% State.all.each do |d| %>
+      <option value="<%= d.id %>"><%= d.name %></option>
+    <% end %>
+  </select>
   <div>
-    <label>State :</label>
-    <input type="text" name="state" value="<%= @generator.state %>">
-  </div>
-
   <input type="submit" value="Update Generator">
-
+</div>
 <% end %>

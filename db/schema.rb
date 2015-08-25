@@ -32,6 +32,14 @@ ActiveRecord::Schema.define(version: 0) do
   add_index "generators", ["fuel_id"], name: "index_generators_on_fuel_id"
   add_index "generators", ["state_id"], name: "index_generators_on_state_id"
 
+  create_table "rtos", force: :cascade do |t|
+    t.string "generator_id"
+    t.string "state_id"
+  end
+
+  add_index "rtos", ["generator_id"], name: "index_rtos_on_generator_id"
+  add_index "rtos", ["state_id"], name: "index_rtos_on_state_id"
+
   create_table "states", force: :cascade do |t|
     t.string "name"
     t.string "shortname"

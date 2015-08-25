@@ -24,3 +24,7 @@ State
   name: string
   shortname: string
 
+Rto
+  generator_id: string
+  state_id: string
+
