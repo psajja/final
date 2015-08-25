@@ -39,7 +39,7 @@
           <%= generator.county %>
         </td>
         <td>
-          <%= generator.state %>
+          <%= State.find_by(id:generator.state_id).shortname %>
         </td>
         
         <td>

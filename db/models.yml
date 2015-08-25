@@ -5,7 +5,7 @@ Generator
   inservice_date: string
   fuel_id: integer
   county: string
-  state: string
+  state_id: integer
   
   
 User
@@ -19,3 +19,8 @@ Fuel
   fueltype: string
   availability: string
   linktoimage: string
+
+State
+  name: string
+  shortname: string
+

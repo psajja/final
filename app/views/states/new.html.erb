@@ -1,0 +1,17 @@
+<h1>Add a New State </h1>
+
+<%= form_tag "/states" do %>
+  <div>
+    <label>State Type :</label>
+    <input type="text" name="name">
+  </div>
+
+  <div>
+    <label>Short Name :</label>
+    <input type="text" name="shortname">
+  </div>
+
+
+  <input type="submit" value="Add New State">
+
+<% end %>

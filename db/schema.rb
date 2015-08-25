@@ -24,12 +24,18 @@ ActiveRecord::Schema.define(version: 0) do
     t.string  "project_name"
     t.integer "mw"
     t.string  "inservice_date"
-    t.string  "state"
     t.string  "county"
     t.integer "fuel_id"
+    t.integer "state_id"
   end
 
   add_index "generators", ["fuel_id"], name: "index_generators_on_fuel_id"
+  add_index "generators", ["state_id"], name: "index_generators_on_state_id"
+
+  create_table "states", force: :cascade do |t|
+    t.string "name"
+    t.string "shortname"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string  "name"
