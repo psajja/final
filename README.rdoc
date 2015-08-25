@@ -1,5 +1,17 @@
 == README
 
+1. Deployed to Public url 
+
+http://www.powerplantmap.us/
+https://shrouded-bayou-1624.herokuapp.com
+
+
+
+
+
+
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
