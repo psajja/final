@@ -3,6 +3,9 @@
 1. Deployed to Public url 
 
 http://www.powerplantmap.us/
+
+or 
+
 https://shrouded-bayou-1624.herokuapp.com
 
 
